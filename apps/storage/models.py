@@ -22,13 +22,3 @@ class product(models.Model): #producto
     description = models.TextField(null=False, blank=False)
     price = models.DecimalField(null=False, blank=False, max_digits=3, decimal_places=2)
 
-class order(models.Model): #envio
-    pk_num_order = models.AutoField(primary_key=True, null=False, blank=False)
-    fk_customer = models.ForeignKey(customer, null=False, blank=False, on_delete=models.CASCADE)
-    shipping_address = models.CharField(max_length=80, null=False, blank=False)
-    send_date = models.DateField(auto_now=False, auto_now_add=True, null=False, blank=False)
-    amount = models.IntegerField(null=False, blank=False)
-    fk_product = models.OneToOneField(product, null=False, blank=False, on_delete=models.CASCADE)
-
-
-
