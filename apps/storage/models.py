@@ -8,7 +8,7 @@ class customer(models.Model): #cliente
     surname_client = models.CharField(max_length=20, null=False, blank=False)
     dpi = models.CharField(max_length=12, null=False, blank=False)
     telephone = models.CharField(max_length=8, null=False, blank=False)
-    direction = models.CharField(null=False, blank=False)
+    direction = models.CharField(max_length=50, null=False, blank=False)
 
 class seller(models.Model): #vendedor
     pk_id_seller = models.AutoField(primary_key=True, null=False, blank=False)
@@ -25,7 +25,8 @@ class order(models.Model): #envio
 
 class product(models.Model): #producto
     pk_product = models.AutoField(primary_key=True, null=False, blank=False)
-    Marca = models.CharField(max_length=80, null=False, blank=False)
+    code = models.CharField(max_length=8, null=False, blank=False)
+    name = models.CharField(max_length=40, null=False, blank=False)
+    description = models.TextField(null=False, blank=False)
     price = models.DecimalField(null=False, blank=False, max_digits=4, decimal_places=2)
-    amount = models.IntegerField(null=False, blank=False)
 
