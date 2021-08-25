@@ -28,5 +28,5 @@ class product(models.Model): #producto
     code = models.CharField(max_length=8, null=False, blank=False)
     name = models.CharField(max_length=40, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
-    price = models.DecimalField(null=False, blank=False, max_digits=4, decimal_places=2)
+    price = models.DecimalField(null=False, blank=False, max_digits=3, decimal_places=2)
 
