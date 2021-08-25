@@ -2,31 +2,31 @@ from django.db import models
 
 # Create your models here.
 
-class customer(models.Model): #cliente
-    pk_id_customer = models.AutoField(primary_key=True, null=False, blank=False)
-    name_client = models.CharField(max_length=20, null=False, blank=False)
-    surname_client = models.CharField(max_length=20, null=False, blank=False)
+class cliente(models.Model): #cliente
+    pk_cliente = models.AutoField(primary_key=True, null=False, blank=False)
+    nombre_cliente = models.CharField(max_length=20, null=False, blank=False)
+    apellido_cliente = models.CharField(max_length=20, null=False, blank=False)
     dpi = models.CharField(max_length=12, null=False, blank=False)
-    telephone = models.CharField(max_length=8, null=False, blank=False)
-    direction = models.CharField(max_length=50, null=False, blank=False)
+    telefono = models.CharField(max_length=8, null=False, blank=False)
+    direccion= models.CharField(max_length=50, null=False, blank=False)
 
-class seller(models.Model): #vendedor
-    pk_id_seller = models.AutoField(primary_key=True, null=False, blank=False)
-    name_seller = models.CharField(max_length=20, null=False, blank=False)
-    telephone = models.CharField(max_length=8, null=False, blank=False)
+class vendedor(models.Model): #vendedor
+    pk_vendedor = models.AutoField(primary_key=True, null=False, blank=False)
+    nombre_vendedor = models.CharField(max_length=20, null=False, blank=False)
+    telefono = models.CharField(max_length=8, null=False, blank=False)
 
-class product(models.Model): #producto
-    pk_product = models.AutoField(primary_key=True, null=False, blank=False)
-    code = models.CharField(max_length=9, null=False, blank=False)
-    name = models.CharField(max_length=40, null=False, blank=False)
-    description = models.TextField(null=False, blank=False)
-    price = models.DecimalField(null=False, blank=False, max_digits=2, decimal_places=2)
+class producto(models.Model): #producto
+    pk_producto = models.AutoField(primary_key=True, null=False, blank=False)
+    codigo = models.CharField(max_length=9, null=False, blank=False)
+    nombre = models.CharField(max_length=40, null=False, blank=False)
+    descripcion = models.TextField(null=False, blank=False)
+    precio = models.DecimalField(null=False, blank=False, max_digits=2, decimal_places=2)
 
-class order(models.Model): #envio
-    pk_num_order = models.AutoField(primary_key=True, null=False, blank=False)
-    fk_customer = models.ForeignKey(customer, null=False, blank=False, on_delete=models.CASCADE)
-    shipping_address = models.CharField(max_length=80, null=False, blank=False)
-    send_date = models.DateField(auto_now=False, auto_now_add=True, null=False, blank=False)
-    amount = models.IntegerField(null=False, blank=False)
-    fk_product = models.OneToOneField(product, null=False, blank=False, on_delete=models.CASCADE)
+class envio(models.Model): #envio
+    pk_envio = models.AutoField(primary_key=True, null=False, blank=False)
+    fk_cliente = models.ForeignKey(cliente, null=False, blank=False, on_delete=models.CASCADE)
+    direccion_envio = models.CharField(max_length=80, null=False, blank=False)
+    fecha_envio = models.DateField(auto_now=False, auto_now_add=True, null=False, blank=False)
+    cantidad = models.IntegerField(null=False, blank=False)
+    fk_producto = models.OneToOneField(producto, null=False, blank=False, on_delete=models.CASCADE)
 
