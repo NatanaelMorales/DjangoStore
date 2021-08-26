@@ -423,12 +423,9 @@
     margin-left: calc(((100% - 340px) / 2));
   }
 }.u-section-2 .u-sheet-1 {
-  min-height: 609px;
+  min-height: 679px;
 }
 
 .u-section-2 .u-map-1 {
-  animation-duration: 500ms;
-  height: 557px;
-  margin-top: 0;
-  margin-bottom: 52px;
+  animation-duration: 1000ms;
 }
