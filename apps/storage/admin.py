@@ -36,7 +36,7 @@ class ResourceVendedor(resources.ModelResource):
 
 class AdminVendedor(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ['nombre_vendedor']
-    list_display = ['pk_vendedor', 'nombre_vendedor', 'telefono']
+    list_display = ['pk_vendedor', 'nombre_vendedor', 'telefono', 'dpi']
     resource_class = ResourceVendedor
 
 admin.site.register(vendedor, AdminVendedor)
