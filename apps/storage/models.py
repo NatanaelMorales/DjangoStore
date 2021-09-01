@@ -8,12 +8,13 @@ class cliente(models.Model): #cliente
     apellido_cliente = models.CharField(max_length=20, null=False, blank=False)
     dpi = models.CharField(max_length=12, null=False, blank=False)
     telefono = models.CharField(max_length=8, null=False, blank=False)
-    direccion= models.CharField(max_length=50, null=False, blank=False)
+    direccion = models.CharField(max_length=50, null=False, blank=False)
 
 class vendedor(models.Model): #vendedor
     pk_vendedor = models.AutoField(primary_key=True, null=False, blank=False)
     nombre_vendedor = models.CharField(max_length=20, null=False, blank=False)
     telefono = models.CharField(max_length=8, null=False, blank=False)
+    dpi = models.CharField(max_length=12, null=False, blank=False)
 
 class producto(models.Model): #producto
     pk_producto = models.AutoField(primary_key=True, null=False, blank=False)
