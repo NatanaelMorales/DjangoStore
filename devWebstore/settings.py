@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'fs&hm9q7vy4)_s7f@mnyr@acvk9uk9rb)u%9c4bh&eirmi!$r='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'devWebstore.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
-DATABASES = {
 """
+DATABASES = {
+
     'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'DevWebStore',
