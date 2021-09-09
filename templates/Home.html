@@ -122,20 +122,30 @@
         <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
-
-            {%if allproduct%}
-              {%for arrayproduct in allproduct%}
               <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
                 <div class="u-container-layout">
-                  <img src="{{arrayproduct.imagen1}}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
-                  <h4 class="u-text u-text-2">{{arrayproduct.nombre}}</h4>
-                    <p>{{arrayproduct.descripcion}}</p>
-                    <p class="price"><span>Q{{arrayproduct.precio}}</span></p>
+                  <img src="{%static 'images/5.jpg'%}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
+                  <h4 class="u-text u-text-2">Phones</h4>
                 </div>
               </div>
-              {%endfor%}
-            {%endif%}
-
+              <div class="u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-2">
+                <div class="u-container-layout">
+                  <img src="{%static 'images/Explore_Tab_S_080818.jpg'%}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-2">
+                  <h4 class="u-align-center u-text u-text-3">Tablets</h4>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-size-15 u-size-30-md u-layout-cell-3">
+                <div class="u-container-layout">
+                  <img src="{%static 'images/Reloj.jpg'%}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-3">
+                  <h4 class="u-text u-text-4">Wearables</h4>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-15 u-size-30-md u-layout-cell-4">
+                <div class="u-container-layout">
+                  <img src="{%static 'images/Explore_Virtual_S_080818.jpg'%}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-4">
+                  <h4 class="u-align-center u-text u-text-5">Virtual Reality</h4>
+                </div>
+              </div>
             </div>
           </div>
         </div>
