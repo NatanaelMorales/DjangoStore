@@ -10,6 +10,15 @@ class cliente(models.Model):
     telefono = models.CharField(max_length=8, null=False, blank=False)
     direccion = models.CharField(max_length=50, null=False, blank=False)
 
+    class Meta:
+        verbose_name='cliente'
+        verbose_name_plural='clientes'
+        ordering=['nombre_cliente']
+
+    def __str__(self):
+        return "{0}".format(self.nombre_cliente)
+
+
 class vendedor(models.Model):
     pk_vendedor = models.AutoField(primary_key=True, null=False, blank=False)
     nombre_vendedor = models.CharField(max_length=20, null=False, blank=False)
@@ -23,6 +32,15 @@ class producto(models.Model):
     descripcion = models.TextField(null=False, blank=False)
     imagen1 = models.URLField(max_length=800, default='https://i.postimg.cc/Y0gkNhTM/3aabe0e9a520b9ad90407a82f85adb42.jpg', null=False, blank=False)
     precio = models.DecimalField(null=False, blank=False, max_digits=7, decimal_places=2)
+
+    class Meta:
+        verbose_name='producto'
+        verbose_name_plural='productos'
+        ordering=['nombre']
+
+    def __str__(self):
+        return "{0}".format(self.nombre)
+
 
 class envio(models.Model):
     pk_envio = models.AutoField(primary_key=True, null=False, blank=False)
