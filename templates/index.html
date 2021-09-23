@@ -1,5 +1,4 @@
 {%load staticfiles%}
-
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -126,14 +125,14 @@
 
             {%if allproduct%}
               {%for arrayproduct in allproduct%}
-              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
-                <div class="u-container-layout">
-                  <img src="{{arrayproduct.imagen1}}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
-                  <h4 class="u-text u-text-2">{{arrayproduct.nombre}}</h4>
-                    <p>{{arrayproduct.descripcion}}</p>
-                    <p class="price"><span>Q{{arrayproduct.precio}}</span></p>
+                <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-15 u-size-30-md u-layout-cell-1">
+                    <div class="u-container-layout">
+                        <img src="{{arrayproduct.imagen1}}" alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-1">
+                        <h4 class="u-text u-text-2">{{arrayproduct.nombre}}</h4>
+                        <p>{{arrayproduct.descripcion}}</p>
+                        <p class="price"><span>Q{{arrayproduct.precio}}</span></p>
+                    </div>
                 </div>
-              </div>
               {%endfor%}
             {%endif%}
             </div>
