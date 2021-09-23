@@ -2,13 +2,19 @@ from django.db import models
 
 # Create your models here.
 
+class contact(models.Model):
+    pk_contact = models.AutoField(primary_key=True, null=False, blank=False)
+    correo = models.CharField(max_length=20, null=False, blank=False)
+    nombre = models.CharField(max_length=20, null=False, blank=False)
+    mensaje = models.TextField(null=False, blank=False)
+
 class cliente(models.Model):
     pk_cliente = models.AutoField(primary_key=True, null=False, blank=False)
     nombre_cliente = models.CharField(max_length=20, null=False, blank=False)
     apellido_cliente = models.CharField(max_length=20, null=False, blank=False)
     dpi = models.CharField(max_length=12, null=False, blank=False)
     telefono = models.CharField(max_length=8, null=False, blank=False)
-    direccion = models.CharField(max_length=50, null=False, blank=False)
+    direccion = models.TextField(null=False, blank=False)
 
     class Meta:
         verbose_name='cliente'
